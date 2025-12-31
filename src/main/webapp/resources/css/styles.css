@@ -1,0 +1,294 @@
+:root {
+    --nude-50: #faf8f6;
+    --nude-100: #f5f1ed;
+    --nude-200: #ede6df;
+    --nude-300: #e3d5c9;
+    --nude-400: #d4bfae;
+    --nude-500: #c4a898;
+    --nude-600: #b08d7d;
+    --nude-700: #9a7565;
+    --nude-800: #7d5f52;
+    --nude-900: #5d4740;
+    --accent: #d4bfae;
+    --text-dark: #5d4740;
+    --text-light: #9a7565;
+    --shadow: rgba(93, 71, 64, 0.08);
+    --shadow-md: rgba(93, 71, 64, 0.12);
+    --shadow-lg: rgba(93, 71, 64, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--nude-50) 0%, var(--nude-100) 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation moderne */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px var(--shadow);
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    border-bottom: 1px solid var(--nude-200);
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, var(--nude-300), var(--nude-400));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-md);
+}
+
+/* En-têtes élégants */
+h1 {
+    color: var(--text-dark);
+    text-align: center;
+    margin: 3rem 0 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    color: var(--text-dark);
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+/* Tables modernes avec glassmorphism */
+table {
+    width: 92%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow-lg);
+    border: 1px solid var(--nude-200);
+}
+
+thead {
+    background: linear-gradient(135deg, var(--nude-400), var(--nude-500));
+    color: white;
+}
+
+th {
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--nude-100);
+    font-size: 0.95rem;
+}
+
+tbody tr {
+    transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+    background: var(--nude-50);
+    transform: scale(1.002);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Formulaires modernes */
+form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 650px;
+    margin: 2rem auto;
+    box-shadow: 0 8px 32px var(--shadow-lg);
+    border: 1px solid var(--nude-200);
+}
+
+label {
+    display: block;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid var(--nude-200);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--nude-50);
+    color: var(--text-dark);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--nude-400);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(212, 191, 174, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+/* Boutons modernes */
+button {
+    background: linear-gradient(135deg, var(--nude-400), var(--nude-500));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(212, 191, 174, 0.3);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 191, 174, 0.4);
+    background: linear-gradient(135deg, var(--nude-500), var(--nude-600));
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Animation d'entrée */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table, form {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Bouton supprimer dans les tableaux */
+.delete-btn {
+    background: linear-gradient(135deg, #e08080, #d06060);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(224, 128, 128, 0.3);
+    letter-spacing: 0.3px;
+    width: auto;
+    margin: 0;
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224, 128, 128, 0.4);
+    background: linear-gradient(135deg, #d06060, #c04040);
+}
+
+.delete-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin: 2rem 0 1rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    table {
+        width: 95%;
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 0.8rem;
+    }
+    
+    form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
